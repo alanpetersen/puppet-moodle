@@ -76,7 +76,7 @@ define moodle::app (
     logoutput => true,
     path      => '/usr/bin:/usr/local/bin',
     creates   => "${install_dir}/config.php",
-    require => Staging::Extract['moodle.tgz'],
+    require   => Staging::Extract['moodle.tgz'],
   }
 
 }

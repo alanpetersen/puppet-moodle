@@ -12,7 +12,7 @@ define moodle::db (
   ## Set up DB using puppetlabs-mysql defined type
   if $create_db {
     mysql_database { "${dbhost}/${dbname}":
-      name => $dbname,
+      name    => $dbname,
       charset => 'utf8',
     }
   }
