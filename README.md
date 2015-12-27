@@ -22,30 +22,40 @@ This module have some external dependencies:
 
 ## Usage
 
-* install_dir    - directory where the Moodle distribution will be extracted. Since Moodle distributions contain the `moodle` root folder, this directory should end with /moodle. For example `/opt/www/moodle`. The parent directory must already exist on the node.
-* download_base  = the base URL for downloading the Moodle distribution. Defaults to `https://download.moodle.org/download.php/direct/stable30`.
-* moodle_version = the version of Moodle to download. Defaults to `3.0.1`.
-* default_lang   - The default language setting for Moodle. Defaults to `en`.
-* wwwrooturl     - The root URL for the Moodle web site. Defaults to `http://$::fqdn`.
-* www_owner      - The OS user that will own the Moodle base directories (web and data).
-* www_group      - The OS group that will own the Moodle base directories (web and data).
-* dataroot       - The Moodle data directory. Defaults to `/opt/moodledata`.
-* create_db      - A boolean indicating whether or not the module should manage the database. Defaults to `true`.
-* create_db_user - A boolean indicating whether or not the module should manage the database user. Defaults to `true`.
-* dbtype         - The database type to use. Currently, only MySQL databases are supported, so `mysqli` is the default (and only supported) value. This will change once PostgreSQL support is added.
-* dbhost         - Hostname for the database server. Defaults to `localhost`.
-* dbname         - The database name for the Moodle data. Defaults to `moodle`.
-* dbuser         - The database username. Defaults to `root`.
-* dbpass         - The database password. Defaults to empty string.
-* dbport         - The TCP/IP port for the database server. Defaults to `3306` (the MySQL default)
-* dbsocket       - 
-* prefix         - Table prefix for Moodle-related tables. Defaults to `mdl_`.
-* fullname       - The full name for the Moodle site.
-* shortname      - The short name for the Moodle site.
-* summary        - A summary description for the Moodle site.
-* adminuser      - The Moodle administrative user. Defaults to `admin`.
-* adminpass      - The Moodle administrator's password. Defaults to `adminpass`.
-* adminemail     - The Moodle administrator's email address. Defaults to `admin@example.com`.
+To manage a Moodle instance, use the `moodle` class.
+
+~~~
+	class { 'moodle':
+		<<params>>
+	}
+~~~
+
+Available parameters are:
+
+* `install_dir`    - directory where the Moodle distribution will be extracted. Since Moodle distributions contain the `moodle` root folder, this directory should end with /moodle. For example `/opt/www/moodle`. The parent directory must already exist on the node.
+* `download_base`  - the base URL for downloading the Moodle distribution. Defaults to `https://download.moodle.org/download.php/direct/stable30`.
+* `moodle_version` - the version of Moodle to download. Defaults to `3.0.1`.
+* `default_lang`   - The default language setting for Moodle. Defaults to `en`.
+* `wwwrooturl`     - The root URL for the Moodle web site. Defaults to `http://$::fqdn`.
+* `www_owner`      - The OS user that will own the Moodle base directories (web and data).
+* `www_group`      - The OS group that will own the Moodle base directories (web and data).
+* `dataroot`       - The Moodle data directory. Defaults to `/opt/moodledata`.
+* `create_db`      - A boolean indicating whether or not the module should manage the database. Defaults to `true`.
+* `create_db_user` - A boolean indicating whether or not the module should manage the database user. Defaults to `true`.
+* `dbtype`         - The database type to use. Currently, only MySQL databases are supported, so `mysqli` is the default (and only supported) value. This will change once PostgreSQL support is added.
+* `dbhost`         - Hostname for the database server. Defaults to `localhost`.
+* `dbname`         - The database name for the Moodle data. Defaults to `moodle`.
+* `dbuser`         - The database username. Defaults to `root`.
+* `dbpass`         - The database password. Defaults to empty string.
+* `dbport`         - The TCP/IP port for the database server. Defaults to `3306` (the MySQL default)
+* `dbsocket`       - 
+* `prefix`         - Table prefix for Moodle-related tables. Defaults to `mdl_`.
+* `fullname`       - The full name for the Moodle site.
+* `shortname`      - The short name for the Moodle site.
+* `summary`        - A summary description for the Moodle site.
+* `adminuser`      - The Moodle administrative user. Defaults to `admin`.
+* `adminpass`      - The Moodle administrator's password. Defaults to `adminpass`.
+* `adminemail`     - The Moodle administrator's email address. Defaults to `admin@example.com`.
   
 ## Example Usage
 

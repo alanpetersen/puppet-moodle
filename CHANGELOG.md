@@ -1,3 +1,7 @@
+## 2015-12-27 - Release 0.1.5
+### Summary
+Doc updates in README.
+
 ## 2015-12-27 - Release 0.1.4
 ### Summary
 Fixed typos in metadata and changelog.
