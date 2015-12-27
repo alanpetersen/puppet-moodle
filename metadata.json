@@ -1,6 +1,6 @@
 {
   "name": "alanpetersen-moodle",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "author": "alanpetersen",
   "summary": "Manages the Moodle Leanring Management System",
   "license": "Apache-2.0",
@@ -8,8 +8,7 @@
   "project_page": "https://github.com/alanpetersen/puppet-moodle",
   "issues_url": "https://github.com/alanpetersen/puppet-moodle/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
-    {"name":"alanpetersen-php5","version_requirement":">= 0.1.0"}
+    {"name":"nanliu/staging","version_requirement":">= 1.0.1 < 2.0.0"}
   ],
   "requirements": [
     {
