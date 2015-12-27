@@ -1,0 +1,7 @@
+.git/
+.vagrant/
+junit/
+log/
+pkg/
+spec/fixtures/
+vendor/

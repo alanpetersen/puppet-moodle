@@ -1,0 +1,10 @@
+fixtures:
+  repositories:
+    stdlib:  "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    staging: "https://github.com/nanliu/puppet-staging.git"
+    mysql: "https://github.com/puppetlabs/puppetlabs-mysql.git"
+    apache: "https://github.com/puppetlabs/puppetlabs-apache.git"
+    concat: "https://github.com/puppetlabs/puppetlabs-concat.git"
+    php5: "https://github.com/alanpetersen/puppet-php5.git"
+  symlinks:
+    moodle: "#{source_dir}"
