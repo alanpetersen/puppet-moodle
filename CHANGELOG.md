@@ -1,3 +1,7 @@
+## 2015-12-27 - Release 0.1.6
+### Summary
+Added a moodleversion custom fact.
+
 ## 2015-12-27 - Release 0.1.5
 ### Summary
 Doc updates in README.
