@@ -18,7 +18,7 @@ end
 if apachecmd && command?(apachecmd)
   results = Facter::Core::Execution.exec("#{apachecmd} -S")
   results.split("\n").each do |r|
-    if r =~ /port/
+    if r =~ /port.*\)$/
       vhost_conf = r.strip.split[4].sub(/\(/,'').sub(/:\d+\)/,'')
       File.open(vhost_conf) do |f|
         f.each_line do |line|
